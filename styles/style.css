@@ -14,9 +14,11 @@
 
 /* shared style */
 body {
+    /* max-width: 1440px; */
 
     font-family: 'Work Sans',
         sans-serif;
+
 }
 
 .btn-primary {
@@ -27,6 +29,31 @@ body {
     padding: 20px 25px;
     cursor: pointer;
     font-size: 1.25rem;
+}
+
+.text-primary {
+    color: #FF900E;
+    font-size: 2.8rem;
+    font-weight: 700;
+
+
+}
+
+.text-secondary {
+    color: #131313;
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+.text-gray {
+    color: #727272;
+    font-size: 2.8rem;
+    font-weight: 500;
+}
+
+.text-lightgrey {
+    color: #727272;
+
 }
 
 /* shared style  ends*/
@@ -74,6 +101,7 @@ nav ul li a {
 }
 
 /* header banner */
+
 .banner-content {
     padding: 50px 300px 20px 300px;
     display: flex;
@@ -115,9 +143,126 @@ nav ul li a {
 
 /* header and nav styles ends*/
 
+/* main styles */
+main {
+    padding: 0px 80px;
+}
+
+/* =================feature starts=================== */
+.features {
+    display: flex;
+    gap: 35px;
+    padding: 50px 150px;
+}
+
+.features-img-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.features-img-container .feature-img {}
+
+.feature-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+/* =================feature ends=================== */
+
+
+
+
+
+/* =====================enjoy-feature starts============== */
+.enjoy-features {
+    display: flex;
+    gap: 70px;
+    padding: 0 150px;
+    margin-bottom: 0px;
+    max-height: 900px
+}
+
+
+.enjoy-feature-title {
+    border-left: 5px solid #FF900E;
+    padding-left: 15px;
+}
+
+.enjoy-card-container {
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.enjoy-card {
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
+    padding: 20px 40px;
+    margin-bottom: 20px;
+    width: 480px;
+}
+
+.enjoy-card:last-child {
+    margin-bottom: 0;
+}
+
+.enjoy-card .card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.enjoy-features img {
+    height: 90%;
+    margin-bottom: 0px;
+}
+
+.enjoy-features .experience {
+    position: relative;
+    bottom: 100px;
+    right: 60px;
+    margin-bottom: 0px;
+}
+
+.enjoy-features .experience h5 {
+    color: #FFF;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.enjoy-features .experience p {
+    color: #FFF;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+
+
+
+/* =====================enjoy-feature ends============== */
+
+
+
+
+
+/* main styles ends */
+
 /* media query and responsiveness */
 @media screen and (max-width:576px) {
-    nav {
+
+    nav,
+    .features,
+    .enjoy-features {
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -133,14 +278,41 @@ nav ul li a {
         padding: 5px;
 
     }
+
+
+
+
+    .features-img-container {
+        grid-template-columns: 1fr;
+
+    }
+
+
+
+    .enjoy-card {
+
+        width: 300px;
+    }
+
+    .enjoy-features img {
+        width: 100%;
+    }
+
+    .enjoy-features .experience {
+        max-width: 300px;
+    }
 }
 
 @media screen and (min-width:576px) and (max-width:960px) {
+
     /* nav {
         flex-direction: column;
         align-items: center;
         justify-content: center;
     } */
+    .enjoy-features {
+        flex-direction: column;
+    }
 
     .banner-content {
         padding: 50px;
@@ -150,6 +322,19 @@ nav ul li a {
 
         width: 100%;
         padding: 15px;
+
+    }
+
+    .features {
+        display: flex;
+        gap: 15px;
+
+    }
+
+
+    .features-img-container .feature-img {
+        width: 250px;
+        margin-top: 20px;
 
     }
 }
