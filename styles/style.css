@@ -145,7 +145,7 @@ nav ul li a {
 
 /* main styles */
 main {
-    padding: 0px 80px;
+    padding: 0px 50px;
 }
 
 /* =================feature starts=================== */
@@ -304,6 +304,14 @@ main {
 
 /* ===================sponsors style ends=================== */
 
+footer {
+    margin: 150px;
+    border-radius: 8px;
+    background: #FFF4E7;
+    text-align: center;
+    padding: 20px;
+}
+
 
 
 
@@ -312,6 +320,11 @@ main {
 
 /* media query and responsiveness */
 @media screen and (max-width:576px) {
+    main {
+        margin: 0;
+        padding: 0;
+
+    }
 
     nav,
     .features,
@@ -326,6 +339,7 @@ main {
     .banner-content {
         padding: 10px;
     }
+
 
     .banner .banner-img {
 
@@ -344,7 +358,7 @@ main {
 
     .features,
     .sponsors {
-        padding: 50px;
+        padding: 10px;
     }
 
     .features-img-container img {
@@ -359,7 +373,7 @@ main {
 
     .enjoy-card {
 
-        width: 200px;
+        width: 250px;
     }
 
     .enjoy-features img {
@@ -367,11 +381,18 @@ main {
     }
 
     .enjoy-features .experience {
-        max-width: 200px;
+        max-width: 160px;
+    }
+
+    .enjoy-features .experience h5 {
+        color: #FFF;
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 700;
     }
 
     .facts {
-        padding: 50px;
+        padding: 30px;
         margin-top: 20px;
     }
 
@@ -379,8 +400,28 @@ main {
         width: 250px
     }
 
+
+
     .sponsors-container {
         gap: 20px
+    }
+
+    footer {
+        margin: 5px 10px;
+        border-radius: 8px;
+        background: #FFF4E7;
+        text-align: center;
+        padding: 10px;
+    }
+
+    footer .text-lightgrey {
+        font-size: 12px;
+    }
+
+    .text-secondary,
+    .text-primary,
+    .text-gray {
+        font-size: 2rem;
     }
 }
 
@@ -391,13 +432,16 @@ main {
         align-items: center;
         justify-content: center;
     } */
+
+
     .enjoy-features,
-    .facts-card-container {
+    .facts-card-container,
+    .sponsors-container {
         flex-direction: column;
     }
 
     .banner-content {
-        padding: 50px;
+        padding: 30px;
     }
 
     .banner .banner-img {
@@ -434,5 +478,7 @@ main {
         margin-top: 20px;
     }
 
-    .facts-card {}
+    .facts-card {
+        max-width: 300px
+    }
 }
